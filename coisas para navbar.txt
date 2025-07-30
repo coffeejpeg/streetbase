@@ -1,0 +1,155 @@
+NAV CELULAR HTML
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#" class="mobile-nav-link">FAQ</a>
+            <a href="#" class="mobile-nav-link">Newswise</a>
+            <a href="#" class="mobile-nav-link">Rules</a>
+            <a href="#" class="mobile-nav-link">Forum</a>
+            <a href="#" class="mobile-nav-link">Store</a>
+            <a href="#" class="mobile-nav-link">Support</a>
+            <a href="#" class="mobile-nav-link server-btn-mobile">ENTRAR SERVIDOR</a>
+        </div>
+
+        NAV CELULAR CSS
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link {
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link:hover {
+    color: #fff;
+}
+
+
+BOTÃO PLAY
+        <div class="play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="48" height="48">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+
+
+            SCRIPT
+
+            <script>
+        // Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Elements
+    const navbar = document.getElementById('navbar');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileNav = document.getElementById('mobileNav');
+    const playButton = document.querySelector('.play-button');
+    
+    // Handle scroll event for navbar transparency
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        } else {
+            navbar.style.backgroundColor = 'transparent';
+        }
+    });
+    
+    // Mobile menu toggle
+    menuIcon.addEventListener('click', function() {
+        this.classList.toggle('open');
+        
+        if (mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+        } else {
+            mobileNav.style.display = 'flex';
+        }
+    });
+    
+    // Handle window resize to fix mobile menu display issues
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && mobileNav.style.display === 'flex') {
+            mobileNav.style.display = 'none';
+            menuIcon.classList.remove('open');
+        }
+    });
+    
+    // Play button click event (placeholder for video functionality)
+    playButton.addEventListener('click', function() {
+        alert('Video trailer would play here!');
+        // In a real implementation, you would:
+        // 1. Create a modal or fullscreen container
+        // 2. Add a video element with the trailer source
+        // 3. Play the video
+    });
+});
+    </script>
+
+
+    /* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 8px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 16px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-icon.open span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}

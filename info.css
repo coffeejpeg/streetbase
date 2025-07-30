@@ -1,0 +1,88 @@
+    /* Reset and base styles */
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-weight: 552;
+        font-family: 'Arial', sans-serif;
+        background-color: black;
+        color: white;
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header Image */
+    .header-image {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Content Sections */
+    .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    
+    .info-section {
+        margin-bottom: 40px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    p {
+        color: #e0e0e0;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .header-image {
+            height: 300px;
+        }
+    
+        h2 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 15px;
+        }
+    
+        .content {
+            padding: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .header-image {
+            height: 200px;
+        }
+    
+        .container {
+            padding: 0 15px;
+        }
+    }
+    

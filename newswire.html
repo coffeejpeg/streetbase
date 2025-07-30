@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetWise RP - Newswire</title>
+    <link rel="shortcut icon" href="img/swwhite.png" type="image/x-icon">
+    <link rel="stylesheet" href="cookiemodal.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+    --primary: #DCDCDC;
+    --background: #0a0a0a;
+    --text: #ffffff;
+    }
+
+
+    /* Navbar */
+        .logosw img{
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 20%;
+        }
+
+        .nav-linksl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .nav-linksl a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-linksl a:hover {
+            opacity: 1;
+        }
+
+        /*Nav right*/
+        .nav-linksr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .nav-linksr a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-linksr a:hover {
+            opacity: 1;
+        }
+    
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .launcher-btn {
+        font-weight: bolder;
+        background-color: var(--primary);
+        color: black;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+    
+    .launcher-btn:hover {
+        opacity: 0.9;
+    }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            padding-top: 100px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+        .news-category {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #d1d5db;
+        }
+        .news-date {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        a {
+            color: #e0e0ee;
+        }
+
+    .footer {
+                background-color: #0f0f0f;
+                color: #9ca3af;
+                padding: 2rem;
+            }
+            .footer-content {
+                max-width: 80rem;
+                margin: 0 auto;
+            }
+            .footer-main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+            }
+            .footer-links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: end;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+            .footer-link {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .footer-link:hover {
+                color: #999999;
+            }
+            .social-links {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+            .social-link {
+                color: white;
+                text-decoration: none;
+            }
+            .social-link:hover {
+                color: #999999;
+            }
+            .footer-secondary {
+                display: grid;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+            .footer-secondary a {
+                color: #9ca3af;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            .footer-secondary a:hover {
+                color: white;
+            }
+            .footer-bottom {
+                font-size: 0.875rem;
+            }
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+                .footer-main, .footer-links, .social-links {
+                    flex-direction: column;
+                }
+            }
+
+            .lg{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+            }
+
+
+    @media (max-width: 1200px) {
+        .video-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 900px) {
+        .video-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-linksl">
+                <a href="/404.html" class="dropdown">Regras</a>
+                <a href="/newswire.html">Notícias</a>
+                <a href="/faq.html">FAQ</a>
+            </div>
+            <a href="/homepage.html" class="logosw"><img src="/img/logoswnew.png" alt="logostreet"></a>
+                <div class="nav-linksr">
+                <a href="/store.html">Loja</a>
+                <a href="/wiki/wiki.html" class="dropdown">Wiki</a>
+                <a href="/support.html">Suporte</a>
+                </div>
+            
+            <div class="nav-right">
+                <a href="mtasa://198.1.195.66:22003"><button class="launcher-btn">ENTRAR SERVIDOR</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="news-grid" id="newsGrid">
+            <!-- Inserir cards de notícias aqui por JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        const news = [
+            {
+                image: "img/smarthumb.png",
+                title: "StreetWise RP: Spoiler SmartWatch",
+                date: "26 de janeiro de 2025",
+                category: "Youtube",
+                href: "https://www.youtube.com/watch?v=ELGrTq1IM3I&t=4s"
+            },
+        ];
+
+        function createNewsCard(item) {
+            return `
+                <a href="${item.href}" class="news-card">
+                    <img src="${item.image}" alt="${item.title}" class="news-image">
+                    <div class="news-content">
+                        <span class="news-category">${item.category}</span>
+                        <span class="news-date"> • ${item.date}</span>
+                        <h2 class="news-title">${item.title}</h2>
+                    </div>
+                </a>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const newsGrid = document.getElementById('newsGrid');
+            news.forEach(item => {
+                newsGrid.innerHTML += createNewsCard(item);
+            });
+        });
+    </script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-main">
+            <div class="footer-links">
+                <a href="/homepage.html"><img src="/img/logoswnew.png" class="lg" alt="streetlogo"></a>
+                <a href="/ab.html" class="footer-link">Sobre Nós</a>
+                <a href="/community-guidelines.html" class="footer-link">Diretrizes da Comunidade</a>
+                <a href="mailto:streetwisemta@gmail.com?subject=Assunto%20do%20Email&body=Olá%2C%20sou%20Seu nome, Venho através deste meio de contato, relatar sobre%3F" class="footer-link">Entre em Contato</a>
+                <a href="/i.html#teamdev" class="footer-link">Equipe</a>
+            </div>
+            <div class="social-links">
+                <a href="https://multitheftauto.com/" class="social-link">
+                    <img src="/img/mta_lg.png" alt="MTA" width="24" height="24">
+                </a>
+                <!--<a href="/instagram" class="social-link">
+                    <img src="/img/instagram.png" alt="Instagram" width="24" height="24">
+                </a>-->
+                <a href="https://discord.gg/HWyWQNPEm3" class="social-link">
+                    <img src="/img/discord.png" alt="Discord" width="24" height="24">
+                </a>
+                <a href="https://www.youtube.com/@streetwiserp" class="social-link">
+                    <img src="/img/youtube.png" alt="YouTube" width="24" height="24">
+                </a>
+                <a href="https://www.rockstargames.com/" class="social-link">
+                    <img src="/img/rockstargames.png" alt="Rockstar" width="24" height="24">
+                </a>
+                <!--<a href="/twitter" class="social-link">
+                    <img src="/img/twitter.png" alt="Twitter" width="24" height="24">
+                </a>-->
+            </div>
+        </div>
+        <div class="footer-secondary">
+            <a href="/404.html">Diretrizes de Privacidade</a>
+            <a href="/newswire.html#cookieModal" id="openModalButton"">Política de cookies</a>
+            <a href="/i.html#teamdev">Conhece a Equipe</a>
+            <a href="https://www.rockstargames.com/br/legal">Diretrizes da Rockstar Games</a>
+            <a href="https://wiki.multitheftauto.com/wiki/PT-BR/Manual_do_Cliente">Diretrizes do Multi Theft Auto</a>
+            <a href="/404.html">Regras do Servidor</a>
+        </div>
+        <div class="footer-bottom">
+            <p>©2024 - 2025, StreetWise Roleplay, Todos direitos reservados.</p>
+            <!--<p>CNPJ nº</p>-->
+            <p>O StreetWise Roleplay não é afiliado, patrocinado ou endossado pela Take-Two Interactive Software, Rockstar North Interactive ou qualquer empresa associada à franquia Grand Theft Auto, desenvolvida pela Rockstar Games. Nosso servidor é hospedado na plataforma Multi Theft Auto, utilizando seus serviços baseados em código open source, sem qualquer vínculo oficial com a plataforma.</p>
+        </div>
+    </div>
+</footer>
+ <!-- Cookies pra q n sei o q serve ao certo -->
+
+ <div class="cookie-modal" id="cookieModal">
+    <div class="modal-header">
+        <h2>Centro de Preferências de Privacidade</h2>
+        <button class="close-button" id="closeModalButton">&times;</button>
+    </div>
+    <div class="modal-content">
+        <h3>Sobre Cookies</h3>
+        <p>
+            Ao acessar um de nossos sites, aplicativos ou outros serviços baseados na Web (“Sites”), as informações podem ser armazenadas ou recuperadas no seu navegador de Internet, a maioria na forma de cookies e tecnologias de rastreamento semelhantes (“Cookies”).
+        </p>
+        <p>
+            Alguns deles são necessários para o funcionamento dos serviços do nosso site, e outros nos permitem oferecer uma experiência aprimorada.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button class="reject-button">Rejeitar todos</button>
+        <button class="confirm-button">Confirmar as minhas escolhas</button>
+    </div>
+</div>
+
+<!-- Fundo -->
+<div class="modal-overlay" id="modalOverlay"></div>
+
+<script>// Seleciona tdos elementos
+    const openModalButton = document.getElementById('openModalButton');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const modal = document.getElementById('cookieModal');
+    const overlay = document.getElementById('modalOverlay');
+    
+    openModalButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras da Comunidade - StreetWise RP</title>
+    <link rel="shortcut icon" href="img/swwhite.png" type="image/x-icon">
+    <style>
+
+        :root {
+            --primary: #DCDCDC;
+            --background: #0a0a0a;
+            --text: #e6e6e6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #e6e6e6;
+            background-image: url('/img/background1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 16px;
+        }
+
+        .header-image {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 48px;
+        }
+
+        .header-image img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            object-fit: cover;
+            padding: 50px;
+            margin: 0;
+        }
+
+        .container{
+            margin: 0 auto;
+        }
+        .container h1 {
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+        }
+        .container p{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .highlight {
+            color: #ff0000;
+            background: #fff;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: bold;
+            transform: rotate(-10deg);
+            margin-bottom: 10px;
+        }
+        .nice {
+            color: #e6e6e6;
+            font-size: 3em;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        .container1 p {
+            font-size: medium;
+            font-weight: 400;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            font-size: 1em;
+            font-weight: 550;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .linesepart h1{
+            border-bottom: solid #616161 2px;
+            gap: 2rem;
+        }
+
+        .container2 h2{
+            display: flex;
+        }
+
+        /*Footer*/
+        .footer {
+            margin-top: 60px;
+            background-color: #0f0f0f;
+            color: #9ca3af;
+            padding: 2rem;
+        }
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        .footer-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #999999;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .social-link {
+            color: white;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            color: #999999;
+        }
+        .footer-secondary {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .footer-secondary a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-secondary a:hover {
+            color: white;
+        }
+        .footer-bottom{
+            font-size: 0.875rem;
+        }
+
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .footer-main, .footer-links, .social-links {
+                flex-direction: column;
+            }
+        }
+
+        h6 {
+            height: 2%;
+            font-weight: 200;
+        }
+
+        .lg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+        }
+
+        .containers h2{
+            margin-left: 15px;
+            display: flex;
+        }
+
+        .containers li{
+            font-weight: 550;
+            margin-left: 25px;
+        }
+
+        .containers p{
+            margin-left: 15px;
+            font-size: medium;
+            font-weight: 400;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .container2 h2{
+            margin-left: 15px;
+        }
+
+        .container2 li{
+            font-weight: 550;
+            margin-left: 25px;
+        }
+
+        .container2 p{
+            margin-left: 15px;
+            font-size: medium;
+            font-weight: 400;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom p{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Regras da Comunidade</h1>
+        <p>Essas regras definem os valores e políticas que mantêm a experiência de jogo justa, respeitosa e segura.</p>
+        <div class="header-image">
+            <img src="/img/rulesim.png" alt="Los Santos Cityscape" class="hero-image">
+        </div>
+    <div class="container1">
+
+        <h5>
+            Nossa comunidade do StreetWise é incrivelmente animada. Todos os dias, milhares de jogadores do mundo todo trabalham para alcançar mais respeito no mundo do crime no <strong>GTA SA - MTA</strong> ou vivem a vida de fora da lei. Nesse mundo fictícios, manter uma boa etiqueta, de respeito e de segurança é nossa prioridade.
+        </h5>
+        
+        <h5>
+            Para garantir uma experiência de jogo positiva — incluindo um ambiente acolhedor — convidamos todos a seguirem essas práticas básicas e cumprirem nossas Regras da Comunidade.
+        </h5>
+
+        <h5>
+        Além disso, estas regras definem quais posturas e ações não permitimos, detalhadas mais a fundo em nossos Termos de Serviço, e elas serão atualizadas periodicamente para refletir mudanças vigentes na experiência de jogadores.
+        </p>
+
+        <h5>
+            Se você notar jogadores agindo em desacordo com nossas Regras da Comunidade, recomendamos que você denuncie esses comportamentos utilizando ferramentas de denuncias localizada em nosso <strong>Discord</strong>.
+        </h5>
+
+    </div>
+
+    <div class="linesepart"><h1></h1></div>
+
+    <div class="container2">
+
+        <h2>Jogo justo</h2>
+
+        <p>
+            Jogar de maneira justa é essencial para que a experiência de todos seja agradável. Trapacear é prejudicial e vai contra o espírito de competição amistosa em nossos jogos online, enquanto o griefing pode estragar a diversão e criar um ambiente negativo para vários jogadores. Ambos os comportamentos podem levar à perda de privilégios de jogador. Definimos esses comportamentos da seguinte forma:
+        </p>
+        
+        <ul>
+        <li>
+            Trapaça: Obter uma vantagem injusta usando trapaças, brechas, hacks ou outros software de terceiros.
+        </li><br>
+
+        <li>
+            Griefing: Perturbar de maneira intencional outros jogadores ou interferir com sua experiência e progresso ao usar o jogo de maneiras não intencionais (por exemplo, matar jogadores logo após eles restaurarem, comportamento abusivo em transmissões ao vivo, dirigir na contramão em uma corrida para prejudicar os outros).
+        </li><br>
+
+        <li>
+            RDM:
+        </li><br>
+
+        <li>
+            VDM:
+        </li><br>
+
+        <li>
+            Fail RP:
+        </li><br>
+        </ul>
+        
+        </div>
+
+        <div class="linesepart"><h1></h1></div>
+
+    <div class="container2">
+
+        <h2>Respeito</h2>
+
+        <p>
+            Aja com respeito. Há um código de honra mesmo entre criminosos. Ensinar jogadores mais novos, ajudar outros jogadores com tarefas como preliminares de Golpes e missões de venda, ou simplesmente atentar-se ao volume do barulho de fundo do seu microfone são exemplos de como promover a boa vontade e a positividade para todos os jogadores em uma sessão. Aja assim com os outros e, quando menos esperar, outros jogadores estarão dispostos a ajudar você também.
+        </p>
+        
+        <p>
+            Não permitimos assédio, bullying, ameaças à identidade entre jogadores – incluindo, sem limitar-se a:
+        </p>
+
+        <ul>
+            <li>
+                Assédio, bullying e ameaças: Assediar ou importunar outras pessoas, inclusive por meio da humilhação, intimidação ou perseguição.
+            </li><br>
+    
+            <li>
+                Ódio e discriminação por questão de identidade: Exaltação ou promoção de grupos de ódio ou de suas ideologias, ou ataques a indivíduos por causa de suas características protegidas, inclusive:
+            </li><br>
+    
+            <ul>
+                <li>Raça ou etnia</li>
+                <li>
+                    Gênero, identidade de gênero ou expressão de gênero
+                </li>
+                <li>Sexualidade</li>
+                <li>Condição de deficiência</li>
+                <li>Nacionalidade</li>
+                <li>Idade</li>
+                <li>Religião</li>
+                <li>Condição de veterano</li>
+                <li>Situação familiar</li>
+            </ul>
+
+            <li>
+                Violência extrema e sanguinolência: Compartilhar imagens e descrições reais de material gráfico, sanguinolência ou crueldade com animais.
+            </li>
+            <li>
+                Nudez adulta e conteúdo sexual: Compartilhar imagens sexuais explícitas ou usar nossa plataforma para solicitar atividades sexuais ou buscar gratificação sexual.
+            </li>
+        </div>
+
+            <div class="linesepart"><h1></h1></div>
+
+            <div class="containers">
+
+                <h2>Segurança</h2>
+        
+                <p>
+                    Garantir uma experiência online segura para todos os jogadores é essencial. Não toleramos comportamentos de jogadores que possam causar mal, em qualquer medida, para outros jogadores, ou que promovam atividades ilegais no mundo real; incluindo, sem limitar-se a:
+                </p>
+                
+                <li>
+                    Extremismo violento: Exaltação ou promoção de organizações terroristas, extremistas ou criminosas no mundo real nem de suas ideologias.
+                </li><br>
+        
+                <li>
+                    Suicídio e autoflagelação: Incentivo ao suicídio ou à autoflagelação no mundo real.
+                </li><br>
+        
+                <li>
+                    Atividades ilegais e regulamentadas: Discutir ou viabilizar, no mundo real, a compra e venda de armas, drogas e outras substâncias controladas.
+                </li><br>
+        
+                <li>
+                    Informações de identificação pessoal: Compartilhar informações pessoais de outros jogadores, como informações de contato.
+                </li><br>
+        
+                <li>
+                    Segurança de menores de idade: Comportamento que possa explorar ou colocar em risco menores de idade, incluindo compartilhar ou discutir material de abuso sexual infantil ou comportamentos predatórios.
+                </li><br>
+                <li>
+                    Spam e fraude: Perturbar ou enganar outras pessoas para promover interações inapropriadas ou fraudulentas, incluindo por meio de mensagens repetidas ou de práticas enganosas.
+                </li><br>
+                
+                <p>
+                    Também não toleramos abuso, comportamento inapropriado ou ameaças contra nossa comunidade ou integrantes da equipe do StreetWise.
+                </p>
+
+                <p>
+                    As regras aplicam-se a todos os aspectos das nossas experiências de jogo online – inclusive comunicações por voz ou texto ou conteúdos criados pela comunidade.
+                </p>
+
+                <p>
+                    Incentivamos fortemente que os jogadores denunciem comportamentos proibidos/inapropriados e que sigam nos ajudando a prezar pela segurança dos nossos jogos.
+                </p>
+
+            </div>
+
+                <div class="linesepart"><h1></h1></div>
+
+            <div class="container2">
+
+                <h2>Consequências</h2>
+        
+                <p>
+                    Não toleramos abuso, comportamento inapropriado ou ameaças contra nossa comunidade ou integrantes da equipe do StreetWise.
+                </p>
+                
+                <p>Se um jogador violar nossa Regras da Comunidade, nos reservamos o direito de tomar medidas contra essa conta. O tipo de medida dependerá do caso, da gravidade e da frequência das violações que encontrarmos na conta – caso seja apropriado, tais violações serão denunciadas às autoridades. Os jogadores que forem flagrados violando nossas Regras da Comunidade podem sofrer medidas punitivas adicionais contra suas contas, incluindo a suspensão de recursos e a suspensão ou encerramento das contas.</p>
+                <p>Caso você precise fazer uma denúncia, use as ferramentas de denúncia dentro de nosso Discord ou as alternativas disponíveis no nosso site.</p>
+                <p>Criamos nossas experiências para que elas sejam aproveitadas pelo número máximo de integrantes da nossa comunidade. Ao fomentar uma base de jogo justo, de segurança dos jogadores e de respeito, você proporcionará a si e às outras pessoas a oportunidade de vivenciar esses mundos vivazes e fazer crescer a comunidade em um ambiente divertido e amistoso.</p>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-links">
+                    <a href="/homepage.html"><img src="/img/logoswnew.png" class="lg" alt="streetlogo"></a>
+                    <a href="/ab.html" class="footer-link">Sobre Nós</a>
+                    <a href="/community-guidelines.html" class="footer-link">Diretrizes da Comunidade</a>
+                    <a href="mailto:streetwisemta@gmail.com?subject=Assunto%20do%20Email&body=Olá%2C%20sou%20Seu nome, Venho através deste meio de contato, relatar sobre%3F" class="footer-link">Entre em Contato</a>
+                    <a href="/i.html#teamdev" class="footer-link">Equipe</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://multitheftauto.com/" class="social-link">
+                        <img src="/img/mta_lg.png" alt="MTA" width="24" height="24">
+                    </a>
+                    <!--<a href="/instagram" class="social-link">
+                        <img src="/img/instagram.png" alt="Instagram" width="24" height="24">
+                    </a>-->
+                    <a href="https://discord.gg/HWyWQNPEm3" class="social-link">
+                        <img src="/img/discord.png" alt="Discord" width="24" height="24">
+                    </a>
+                    <a href="https://www.youtube.com/@streetwiserp" class="social-link">
+                        <img src="/img/youtube.png" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a href="https://www.rockstargames.com/" class="social-link">
+                        <img src="/img/rockstargames.png" alt="Rockstar" width="24" height="24">
+                    </a>
+                    <!--<a href="/twitter" class="social-link">
+                        <img src="/img/twitter.png" alt="Twitter" width="24" height="24">
+                    </a>-->
+                </div>
+            </div>
+            <div class="footer-secondary">
+                <a href="/404.html">Diretrizes de Privacidade</a>
+                <a href="/in.html#cookieModal">Política de cookies</a>
+                <a href="/i.html#teamdev">Conhece a Equipe</a>
+                <a href="https://www.rockstargames.com/br/legal">Diretrizes da Rockstar Games</a>
+                <a href="https://wiki.multitheftauto.com/wiki/PT-BR/Manual_do_Cliente">Diretrizes do Multi Theft Auto</a>
+                <a href="/404.html">Regras do Servidor</a>
+            </div>
+            <div class="footer-bottom">
+                <p>©2024 - 2025, StreetWise Roleplay, Todos direitos reservados.</p>
+                <!--<p>CNPJ nº</p>-->
+                <p>O StreetWise Roleplay não é afiliado, patrocinado ou endossado pela Take-Two Interactive Software, Rockstar North Interactive ou qualquer empresa associada à franquia Grand Theft Auto, desenvolvida pela Rockstar Games. 
+                    Nosso servidor é hospedado na plataforma Multi Theft Auto, utilizando seus serviços baseados em código open source, sem qualquer vínculo oficial com a plataforma.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

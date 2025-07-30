@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetWise RP - Team Developers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="info.css">
+    <link rel="shortcut icon" href="img/swwhite.png" type="image/x-icon">
+</head>
+<style>
+    body, html {
+        font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 16px;
+}
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 48px;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.team-description {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.team-description h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.team-description p {
+    color: #a0aec0;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    margin: 0 0 4px 0;
+}
+
+.team-member p {
+    color: #a0aec0;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+    /*Footer*/
+        .footer {
+            background-color: #0f0f0f;
+            color: #9ca3af;
+            padding: 2rem;
+        }
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        .footer-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #999999;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .social-link {
+            color: white;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            color: #999999;
+        }
+        .footer-secondary {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .footer-secondary a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-secondary a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            font-size: 0.875rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .footer-main, .footer-links, .social-links {
+                flex-direction: column;
+            }
+        }
+
+        .lg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+        }
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="header-image">
+            <img src="/img/headinfoimg.png" alt="Los Santos Cityscape" class="hero-image">
+        </div>
+        
+        <main class="content">
+            <section class="info-section">
+                <h2>Ambientação Servidor</h2>
+                <p>
+                    O StreetWise RP é um servidor de Roleplay (RP) ambientado em San Andreas, 
+                    proporcionando uma experiência única para os jogadores em um ambiente vivo e a dinâmica 
+                    global da região. O objetivo é criar um ambiente onde os jogadores possam 
+                    desenvolver narrativas autênticas e interações significativas.
+                </p>
+            </section>
+
+            <section class="info-section">
+                <h2>Objetivos do Servidor</h2>
+                <p>
+                    O principal foco é oferecer um espaço para que os jogadores vivenciem o cotidiano 
+                    em San Andreas, sendo abordado suas histórias passadas e interligadas com outras 
+                    pessoas. O servidor conta com um sistema de economia realista e bem estruturado, com 
+                    um mapa detalhado que representa as principais cidades e localidades de San 
+                    Andreas, como Las Venturas e San Fierro. Um sistema de empregos permitirá que os 
+                    jogadores escolham suas profissões, interajam socialmente e experimentem economia 
+                    local realista. Eventos regulares, como competições esportivas e festas comunitárias, 
+                    serão organizados para incentivar a interação social.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <div id="teamdev" class="container">
+        <div class="header-image">
+            <img src="/img/headerimgd.png" alt="Team Developer" class="rounded-lg">
+        </div>
+
+        <div id="conhecaequipe" class="team-description">
+            <h1>Equipe Desenvolvedores</h1>
+            <p>Equipe de desenvolvedores é formada por uma quantidade de 5 membros qual busca trazer uma grande inovação para a plataforma.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Diego">
+                </div>
+                <h3>Diigo</h3>
+                <p>Founder/Developer</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="JoaoFP">
+                </div>
+                <h3>Nocaffe</h3>
+                <p>Founder/Developer/Designer</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Vitto">
+                </div>
+                <h3>Vitto</h3>
+                <p>Mapper/Moderator</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Rodrigo">
+                </div>
+                <h3>Scalade</h3>
+                <p>Video/Moderator</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Rodrigo">
+                </div>
+                <h3>LkZ</h3>
+                <p>Modeller</p>
+            </div>
+            <!--<div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Xanon">
+                </div>
+                <h3>Xunnin</h3>
+                <p>Support</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="/img/profile.png" alt="Dario">
+                </div>
+                <h3>Derix</h3>
+                <p>Support</p>
+            </div>-->
+        </div>
+    </div>
+    <script src="sc"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-links">
+                    <a href="/homepage.html"><img src="/img/logoswnew.png" class="lg" alt="streetlogo"></a>
+                    <a href="/ab.html" class="footer-link">Sobre Nós</a>
+                    <a href="/community-guidelines.html" class="footer-link">Diretrizes da Comunidade</a>
+                    <a href="mailto:streetwisemta@gmail.com?subject=Assunto%20do%20Email&body=Olá%2C%20sou%20Seu nome, Venho através deste meio de contato, relatar sobre%3F" class="footer-link">Entre em Contato</a>
+                    <a href="/i.html#teamdev" class="footer-link">Equipe</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://multitheftauto.com/" class="social-link">
+                        <img src="/img/mta_lg.png" alt="MTA" width="24" height="24">
+                    </a>
+                    <!--<a href="/instagram" class="social-link">
+                        <img src="/img/instagram.png" alt="Instagram" width="24" height="24">
+                    </a>-->
+                    <a href="https://discord.gg/HWyWQNPEm3" class="social-link">
+                        <img src="/img/discord.png" alt="Discord" width="24" height="24">
+                    </a>
+                    <a href="https://www.youtube.com/@streetwiserp" class="social-link">
+                        <img src="/img/youtube.png" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a href="https://www.rockstargames.com/" class="social-link">
+                        <img src="/img/rockstargames.png" alt="Rockstar" width="24" height="24">
+                    </a>
+                    <!--<a href="/twitter" class="social-link">
+                        <img src="/img/twitter.png" alt="Twitter" width="24" height="24">
+                    </a>-->
+                </div>
+            </div>
+            <div class="footer-secondary">
+                <a href="/404.html">Diretrizes de Privacidade</a>
+                <a href="/homepage.html#cookieModal">Política de cookies</a>
+                <a href="/i.html#teamdev">Conhece a Equipe</a>
+                <a href="https://www.rockstargames.com/br/legal">Diretrizes da Rockstar Games</a>
+                <a href="https://wiki.multitheftauto.com/wiki/PT-BR/Manual_do_Cliente">Diretrizes do Multi Theft Auto</a>
+                <a href="/404.html">Regras do Servidor</a>
+            </div>
+            <div class="footer-bottom">
+                <p>©2024 - 2025, StreetWise Roleplay, Todos direitos reservados.</p>
+                <!--<p>CNPJ nº</p>-->
+                <p>O StreetWise Roleplay não é afiliado, patrocinado ou endossado pela Take-Two Interactive Software, Rockstar North Interactive ou qualquer empresa associada à franquia Grand Theft Auto, 
+                    desenvolvida pela Rockstar Games. Nosso servidor é hospedado na plataforma Multi Theft Auto, utilizando seus serviços baseados em código open source, 
+                    sem qualquer vínculo oficial com a plataforma.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

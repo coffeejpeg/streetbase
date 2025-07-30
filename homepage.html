@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetWise RP</title>
+    <link rel="shortcut icon" href="img/swwhite.png" type="image/x-icon">
+    <link rel="stylesheet" href="cookiemodal.css">
+    <style>
+
+        :root {
+            --primary: #DCDCDC;
+            --background: #0a0a0a;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        .max-w-7xl {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+        .logosw img{
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 20%;
+        }
+
+        .nav-linksl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .nav-linksl a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-linksl a:hover {
+            opacity: 1;
+        }
+
+        /*Nav right*/
+        .nav-linksr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .nav-linksr a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .nav-linksr a:hover {
+            opacity: 1;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .launcher-btn {
+            font-weight: bolder;
+            background-color: var(--primary);
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .launcher-btn:hover {
+            opacity: 0.9;
+        }
+
+        .hero {
+            width: 100vhb;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-button {
+            background-color: #DCDCDC;
+            color: black;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background-color 0.3s;
+        }
+        .hero-button:hover {
+            background-color: #f5f5f5;
+        }
+        .featured-games, .game-grid {
+            padding: 4rem 2rem;
+        }
+        .featured-games h2, .game-grid h2 {
+            font-size: 1.875rem;
+            margin-bottom: 2rem;
+        }
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        .game-card {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+        .game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .game-card:hover img {
+            transform: scale(1.1);
+        }
+        .game-title {
+            color: #989898;
+            height: 10px;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .game-grid {
+            background-color: #0f0f0f;
+        }
+        
+        /*Footer*/
+        .footer {
+            background-color: #0f0f0f;
+            color: #9ca3af;
+            padding: 2rem;
+        }
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        .footer-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #999999;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .social-link {
+            color: white;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            color: #999999;
+        }
+        .footer-secondary {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .footer-secondary a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-secondary a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            font-size: 0.875rem;
+        }
+        @media (max-width: 768px) {
+            .nav-linksl {
+                display: none;
+            }
+
+            .nav-linksr {
+                display: none;
+            }
+            
+            .footer-main, .footer-links, .social-links {
+                flex-direction: column;
+            }
+        }
+
+        .lg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+        }
+
+        @media (max-width: 1200px) {
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-linksl {
+                display: none;
+            }
+
+            .nav-linksr {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .news-item {
+            background-color: var(--card-background);
+            text-decoration: none;
+            color: var(--text-color);
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        .news-item:hover {
+            background-color: var(--card-hover-background);
+        }
+
+        .news-image {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .news-item:hover .news-image img {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .news-item:hover .news-title {
+            color: var(--primary-color);
+        }
+
+        @media (min-width: 768px) {
+
+            .nav-linksr {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .nav-linksr a {
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .nav-linksr a:hover {
+                color: var(--text-color);
+            }
+
+            .nav-linksl {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .nav-linksl a {
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .nav-linksl a:hover {
+                color: var(--text-color);
+            }
+
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-linksl">
+                <a href="/404.html" class="dropdown">Regras</a>
+                <a href="/newswire.html">Notícias</a>
+                <a href="/faq.html">FAQ</a>
+            </div>
+            <a href="/homepage.html" class="logosw"><img src="/img/logoswnew.png" alt="logostreet"></a>
+                <div class="nav-linksr">
+                <a href="/store.html">Loja</a>
+                <a href="/wiki/wiki.html" class="dropdown">Wiki</a>
+                <a href="/support.html">Suporte</a>
+                </div>
+            
+            <div class="nav-right">
+                <a href="mtasa://198.1.195.66:22003"><button class="launcher-btn">ENTRAR SERVIDOR</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img class="first-thumb" src="/img/smarthumb.png" alt="StreetWise" style="position: absolute; top: 0; left: 0px; height: 100%; width: 100%; object-fit: cover;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,1), transparent);"></div>
+            <div class="hero-content">
+                <h1>StreetWise RP: Spoiler SmartWatch</h1>
+                <p>Conheça nosso SmartWatch</p>
+                <a href="https://www.youtube.com/watch?v=ELGrTq1IM3I&t=4s" class="hero-button">Veja Vídeo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <main class="main-content">
+        <h1>Newswire</h1>
+        <div class="news-grid">
+            <a href="https://www.youtube.com/watch?v=ELGrTq1IM3I&t=4s" class="news-item">
+                <div class="news-image">
+                    <img src="/img/smarthumb.png" alt="StreetWise: Spoiler 1">
+                </div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-game">YouTube</span>
+                        <span class="news-date">26 de janeiro de 2025</span>
+                    </div>
+                    <h2 class="news-title">StreetWise: Spoiler SmartWatch</h2>
+                </div>
+            </a>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-links">
+                    <a href="/homepage.html"><img src="/img/logoswnew.png" class="lg" alt="streetlogo"></a>
+                    <a href="/ab.html" class="footer-link">Sobre Nós</a>
+                    <a href="/community-guidelines.html" class="footer-link">Diretrizes da Comunidade</a>
+                    <a href="mailto:streetwisemta@gmail.com?subject=Assunto%20do%20Email&body=Olá%2C%20sou%20Seu nome, Venho através deste meio de contato, relatar sobre%3F" class="footer-link">Entre em Contato</a>
+                    <a href="/i.html#teamdev" class="footer-link">Equipe</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://multitheftauto.com/" class="social-link">
+                        <img src="/img/mta_lg.png" alt="MTA" width="24" height="24">
+                    </a>
+                    <!--<a href="/404.html" class="social-link">
+                        <img src="/img/instagram.png" alt="Instagram" width="24" height="24">
+                    </a>-->
+                    <a href="https://discord.gg/HWyWQNPEm3" class="social-link">
+                        <img src="/img/discord.png" alt="Discord" width="24" height="24">
+                    </a>
+                    <a href="https://www.youtube.com/@streetwiserp" class="social-link">
+                        <img src="/img/youtube.png" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a href="https://www.rockstargames.com/" class="social-link">
+                        <img src="/img/rockstargames.png" alt="Rockstar" width="24" height="24">
+                    </a>
+                    <!--<a href="/404.html" class="social-link">
+                        <img src="/img/twitter.png" alt="Twitter" width="24" height="24">
+                    </a>-->
+                </div>
+            </div>
+            <div class="footer-secondary">
+                <a href="/404.html">Diretrizes de Privacidade</a>
+                <a href="/homepage.html#cookieModal" id="openModalButton">Política de cookies</a>
+                <a href="/i.html#teamdev">Conhece a Equipe</a>
+                <a href="https://www.rockstargames.com/br/legal">Diretrizes da Rockstar Games</a>
+                <a href="https://wiki.multitheftauto.com/wiki/PT-BR/Manual_do_Cliente">Diretrizes do Multi Theft Auto</a>
+                <a href="/404.html">Regras do Servidor</a>
+            </div>
+            <div class="footer-bottom">
+                <p>©2024 - 2025, StreetWise Roleplay, Todos direitos reservados.</p>
+                <!--<p>CNPJ nº</p>-->
+                <p>O StreetWise Roleplay não é afiliado, patrocinado ou endossado pela Take-Two Interactive Software, Rockstar North Interactive ou qualquer empresa associada à franquia Grand Theft Auto, desenvolvida pela Rockstar Games. Nosso servidor é hospedado na plataforma Multi Theft Auto, utilizando seus serviços baseados em código open source, sem qualquer vínculo oficial com a plataforma.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="videoscript.js"></script>
+<script src="mainboletim.js"></script>
+
+    <!-- Cookies de q n sei o q é cookie -->
+
+    <div class="cookie-modal" id="cookieModal">
+        <div class="modal-header">
+            <h2>Centro de Preferências de Privacidade</h2>
+            <button class="close-button" id="closeModalButton">&times;</button>
+        </div>
+        <div class="modal-content">
+            <h3>Sobre Cookies</h3>
+            <p>
+                Ao acessar um de nossos sites, aplicativos ou outros serviços baseados na Web (“Sites”), as informações podem ser armazenadas ou recuperadas no seu navegador de Internet, a maioria na forma de cookies e tecnologias de rastreamento semelhantes (“Cookies”).
+            </p>
+            <p>
+                Alguns deles são necessários para o funcionamento dos serviços do nosso site, e outros nos permitem oferecer uma experiência aprimorada.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button class="reject-button">Rejeitar todos</button>
+            <button class="confirm-button">Confirmar as minhas escolhas</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <script>
+        const openModalButton = document.getElementById('openModalButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const modal = document.getElementById('cookieModal');
+        const overlay = document.getElementById('modalOverlay');
+        
+        openModalButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', () => {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+        </script>
+
+</body>
+</html>
